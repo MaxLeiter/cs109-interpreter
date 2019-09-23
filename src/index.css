@@ -1,0 +1,103 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+body {
+	background-color: #fd971f;
+}
+
+.parent {
+	display: flex;
+	font-family: arial, sans-serif;
+}
+
+.item {
+	width: 50%;
+	padding: 1em;
+	color: #ffffff;
+	min-height: 500px;
+}
+
+.first {
+	display:  flex;
+	flex-direction: row-reverse;
+}
+
+.ace_gutter-cell::before {
+	content: "M";
+}
+
+.last {
+	color: #222;
+}
+
+.item-inner {
+	width: 100%;
+}
+
+table {
+ margin-top: 1em;
+ border: 2px solid black;   
+}
+
+td {
+ padding: 1em;
+ border: 1px solid black;
+ background-color:  white;
+}
+
+.controls-item {
+	background-color: #272822;
+ 	color: white;
+ 	box-shadow: none;
+ 	padding: none;
+ 	padding-left: 3;
+ 	border: none;
+ 	width:  100px;
+ 	height:  40px;
+ 	margin: 0 0 1em 1em;
+ 	border-left: 2px dotted black;
+}
+
+.controls-item:hover {
+	background-color: black;
+	cursor: pointer;
+}
+
+.controls-item:active {
+	opacity:  .8;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	width:  fit-content;
+}
+
+@media screen and (max-width: 1000px){
+	.parent {
+		flex-direction: column-reverse;  
+	}
+
+	.item {
+		width: auto;
+		min-height: 200px;
+	}
+
+	.last {
+	}
+
+}
