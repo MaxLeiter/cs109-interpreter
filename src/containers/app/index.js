@@ -266,34 +266,25 @@ renderGrid() {
         M104: <TextTransition inline={true} text={this.props.cpu.memory[104]} />  <br />
         M105: <TextTransition inline={true} text={this.props.cpu.memory[105]} />  <br />
         <br />
-
+              Instruction set:<br />
+              <pre>
+              ADD​ Ri Rj Rk <br />
+              SUB​ Ri Rj Rk<br />
+              SET​ Ri value<br />
+              MOVE​ Ri Rj<br />
+              GOTO​ Mi<br />
+              COND_GOTO​ Ri Rj Mi<br />
+              OR​ Ri Rj Rk<br />
+              LOAD​ Mi Ri<br />
+              WRITE​ Ri Mi<br />
+              </pre>
+              Registers: <pre>R1, R2, R3</pre><br />
+              Memory: 
+              <pre>
+              M0...M100 R/W <br />M100...M104 Read
+              </pre>
         </pre>
-        <label> Memory: </label> <br />
-        <p style={{fontFamily: 'monospace'}}>{this.props.cpu.memory.map((e, i, a) => i === a.length-1 ? `${e}` :  `${e}, `)}</p>
       </div>
-      <div style={{marginTop: '1em', marginLeft: '1em'}}>
-      Instruction set:<br />
-      <pre>
-      ADD​ Ri Rj Rk <br />
-      SUB​ Ri Rj Rk<br />
-      SET​ Ri value<br />
-      MOVE​ Ri Rj<br />
-      GOTO​ Mi<br />
-      COND_GOTO​ Ri Rj Mi<br />
-      OR​ Ri Rj Rk<br />
-      LOAD​ Mi Ri<br />
-      WRITE​ Ri Mi<br />
-      </pre>
-<br />
-      Registers: <pre>R1, R2, R3</pre><br />
-      <br />
-      Memory: 
-      <pre>
-      M0...M100 R/W <br />M100...M104 Read
-      </pre>
-      <br />
-      </div>
-
       </div>
     </div>
     )
